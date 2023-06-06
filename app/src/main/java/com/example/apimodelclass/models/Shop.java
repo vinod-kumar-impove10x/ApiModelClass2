@@ -1,6 +1,5 @@
-package com.example.apimodelclass.api;
+package com.example.apimodelclass.models;
 
-import com.example.apimodelclass.Money;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -38,26 +37,25 @@ public class Shop {
     private boolean confirmed;
     @SerializedName("created_at")
     private String createdAt;
-    @SerializedName("currency")
     private String currency;
     @SerializedName("current_subtotal_price")
     private String currentSubtotalPrice;
     @SerializedName("current_subtotal_price_set")
-    private Money money;
+    private PriceSet currentSubtotalPriceSet;
     @SerializedName("current_total_discounts")
     private String currentTotalDiscounts;
     @SerializedName("current_total_discounts_set")
-    private Money money1;
+    private PriceSet currentTotalDiscountsSet;
     @SerializedName("current_total_duties_set")
     private String currentTotalDutiesSet;
     @SerializedName("current_total_price")
     private String currentTotalPrice;
     @SerializedName("current_total_price_set")
-    private Money money2;
+    private PriceSet currentTotalPriceSet;
     @SerializedName("current_total_tax")
     private String currentTotalTax;
     @SerializedName("current_total_tax_set")
-    private Money money3;
+    private PriceSet currentTotalTaxSet;
     @SerializedName("customer_locale")
     private String customerLocale;
     @SerializedName("device_id")
@@ -70,7 +68,6 @@ public class Shop {
     private String financialStatus;
     @SerializedName("fulfillment_status")
     private String fulfillmentStatus;
-    @SerializedName("gateway")
     private String gateway;
     @SerializedName("landing_site")
     private String landingSite;
@@ -78,13 +75,10 @@ public class Shop {
     private String landingSiteRef;
     @SerializedName("location_id")
     private String locationId;
-    @SerializedName("name")
     private String name;
-    @SerializedName("note")
     private String note;
     @SerializedName("note_attributes")
     private ArrayList<String> noteAttributes;
-    @SerializedName("number")
     private Integer number;
     @SerializedName("order_number")
     private Integer orderNumber;
@@ -100,7 +94,6 @@ public class Shop {
     private String processedAt;
     @SerializedName("processing_method")
     private String processingMethod;
-    @SerializedName("reference")
     private String reference;
     @SerializedName("referring_site")
     private String referringSite;
@@ -113,33 +106,34 @@ public class Shop {
     @SerializedName("subtotal_price")
     private String subtotalPrice;
     @SerializedName("subtotal_price_set")
-    private Money money4;
-    @SerializedName("tags")
+    private PriceSet subtotalPriceSet;
     private String tags;
     @SerializedName("taxes_included")
     private boolean taxesIncluded;
-    @SerializedName("test")
     private boolean test;
-    @SerializedName("token")
     private String token;
     @SerializedName("total_discounts")
     private String totalDiscounts;
     @SerializedName("total_discounts_set")
-    private Money money5;
+    private PriceSet totalDiscountsSet;
+    @SerializedName("total_line_items_price")
+    private String totalLineItemsPrice;
+    @SerializedName("total_line_items_price_set")
+    private PriceSet totalLineItemsPriceSet;
     @SerializedName("total_outstanding")
     private String totalOutstanding;
     @SerializedName("total_price")
     private String totalPrice;
     @SerializedName("total_price_set")
-    private Money money6;
+    private PriceSet totalPriceSet;
     @SerializedName("total_price_usd")
     private String totalPriceUsd;
     @SerializedName("total_shipping_price_set")
-    private Money money7;
+    private PriceSet totalShippingPriceSet;
     @SerializedName("total_tax")
     private String totalTax;
     @SerializedName("total_tax_set")
-    private Money money8;
+    private PriceSet totalTaxSet;
     @SerializedName("total_tip_received")
     private String totalTipReceived;
     @SerializedName("total_weight")
@@ -152,23 +146,12 @@ public class Shop {
     private ArrayList<String> discountApplications;
     @SerializedName("fulfillments")
     private ArrayList<String> fulfillments;
+    @SerializedName("line_items")
+    public ArrayList<LineItems> lineItems;
+    @SerializedName("payment_terms")
+    private String paymentTerms;
+    private ArrayList<String> refunds;
 
 
 }
 
-class  ClientDetails {
-    @SerializedName("accept_language")
-    private String acceptLanguage;
-    @SerializedName("browser_height")
-    private Integer browserHeight;
-    @SerializedName("browser_ip")
-    private String browserIp;
-    @SerializedName("browser_width")
-    private Integer browserWidth;
-    @SerializedName("session_hash")
-    private String sessionHash;
-    @SerializedName("user_agent")
-    private String userAgent;
-
-
-}

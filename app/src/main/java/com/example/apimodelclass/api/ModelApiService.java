@@ -1,5 +1,7 @@
 package com.example.apimodelclass.api;
 
+import com.example.apimodelclass.models.Shop;
+
 import java.util.List;
 
 import retrofit2.Call;

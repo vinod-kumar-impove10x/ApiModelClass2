@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 
 import com.example.apimodelclass.api.ModelApi;
 import com.example.apimodelclass.api.ModelApiService;
-import com.example.apimodelclass.api.Shop;
+import com.example.apimodelclass.models.Shop;
 import com.google.gson.Gson;
 
 import java.io.IOException;
